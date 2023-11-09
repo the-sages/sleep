@@ -40,6 +40,14 @@ body {
 	flex-direction: column;
 }
 
+.bullets-container {
+	width: 100%;
+}
+
+.bullets-container > .bullet {
+	margin: 0.5rem;
+}
+
 .bullet {
 	display: inline-block;
 	font-size: 1.6rem;
