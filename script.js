@@ -4,7 +4,7 @@ const BULLETS_AMOUNT = 6;
 
 const calculateWakeUpTime = (timeFrom) => {
 	const timeToSleep = new Date().setTime(
-		timeFrom + TIME_TO_SLEEP + SLEEP_CYCLE
+		timeFrom + SLEEP_CYCLE
 	);
 	return timeToSleep;
 };
@@ -24,7 +24,7 @@ const createBullet = (time, highlight = false) => {
 
 const applyWakeUpTime = () => {
 	const currentDate = new Date();
-	const currentTime = currentDate.getTime();
+	const currentTime = currentDate.getTime() + TIME_TO_SLEEP;
 	const bullets = [];
 	let cycleTime = currentTime;
 	for (let i = 0; i < BULLETS_AMOUNT; i++) {
