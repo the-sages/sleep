@@ -16,6 +16,18 @@
 				<div class="actions-container">
 					<button class="button calculate-wake-up-time">Calculate</button>
 				</div>
+				<div class="sleep-time-section">
+					<h2>Calculate when to go to sleep</h2>
+					<label for="wake-up-input">Desired wake-up time:</label>
+					<div class="ios-time-picker">
+						<label for="wake-up-hour" class="visually-hidden">Hour</label>
+						<select id="wake-up-hour" class="ios-time-select" aria-label="Hour" tabindex="0"></select> :
+						<label for="wake-up-minute" class="visually-hidden">Minute</label>
+						<select id="wake-up-minute" class="ios-time-select" aria-label="Minute" tabindex="0"></select>
+					</div>
+					<button class="button calculate-sleep-time">Calculate</button>
+					<div class="sleep-bullets-container"></div>
+				</div>
 			</div>
 		</div>
 

@@ -1,17 +1,63 @@
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.ios-time-picker {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin: 1rem;
+}
+
+.ios-time-select {
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: #04142e;
+	color: rgb(128, 176, 255);
+	border: 1px solid rgb(128, 176, 255);
+	border-radius: 0.4rem;
+	font-size: 1.2rem;
+	padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+	box-shadow: 0 2px 8px rgba(34, 82, 161, 0.1);
+	cursor: pointer;
+	outline: none;
+	transition: border-color 0.2s;
+}
+
+.ios-time-select:focus {
+	border-color: #fff;
+	box-shadow: 0 0 0 2px #80b0ff;
+}
+
+.button:focus {
+	outline: 2px solid #80b0ff;
+	outline-offset: 2px;
+}
 body {
 	margin: 0;
 	padding: 0;
-}
+	min-height: 100vh;
+	background-color: #04142e;
+	color: rgb(128, 176, 255);
+	}
 
 .layout-container {
 	width: 100%;
-	height: 100dvh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	background-color: #04142e;
-	color: rgb(128, 176, 255);
-}
+	justify-content: flex-start;
+	align-items: center;
+	background-color: transparent;
+	box-sizing: border-box;
+	}
+
 
 .button {
 	background-color: #04142e;
@@ -22,22 +68,60 @@ body {
 	cursor: pointer;
 }
 
+.sleep-time-section {
+	margin-top: 2rem;
+	padding: 1.5rem 1rem;
+	background-color: rgba(34, 82, 161, 0.2);
+	border-radius: 0.5rem;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+.sleep-time-section h2 {
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	color: rgb(128, 176, 255);
+}
+
+.time-input {
+	padding: 0.5rem;
+	border-radius: 0.4rem;
+	border: 1px solid rgb(128, 176, 255);
+	background-color: #04142e;
+	color: rgb(128, 176, 255);
+	font-size: 1rem;
+	margin-right: 1rem;
+}
+
+.sleep-bullets-container {
+	margin-top: 1rem;
+	width: 100%;
+}
+
+.sleep-bullets-container > .bullet {
+	margin: 0.5rem;
+}
+
 .button:hover {
 	background-color: rgb(128, 176, 255);
 	color: #04142e;
 }
 
 .content-container {
-	margin: 0 auto;
-	width: 90%;
-	padding: 1rem;
+	margin: 2rem auto 1rem auto;
+	width: 95%;
+	max-width: 500px;
+	padding: 2rem 1.5rem;
 	box-sizing: border-box;
 	text-align: center;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	gap: 2rem;
 	background-color: rgba(34, 82, 161, 0.2);
-	flex-direction: column;
+	border-radius: 0.7rem;
+	overflow: visible;
 }
 
 .bullets-container {
@@ -64,5 +148,32 @@ body {
 @media screen and (max-width: 420px) {
 	.content-container {
 		gap: 1rem;
+	}
+	.sleep-time-section {
+		padding: 0.5rem;
+		margin-top: 2rem;
+		padding: 1rem;
+		background-color: rgba(34, 82, 161, 0.2);
+		border-radius: 0.5rem;
+		text-align: center;
+		width: 100%;
+		box-sizing: border-box;
+		overflow: visible;
+	}
+		align-items: stretch;
+	}
+	.ios-time-select {
+		font-size: 1.5rem;
+		padding: 1rem;
+		width: 100%;
+		margin-bottom: 0.4rem;
+	}
+	.button {
+		width: 100%;
+		font-size: 1.1rem;
+		padding: 0.7rem 0;
+	}
+	.sleep-bullets-container {
+		font-size: 1.1rem;
 	}
 }
