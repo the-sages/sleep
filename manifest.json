@@ -1,0 +1,17 @@
+{
+  "name": "Sleep App",
+  "short_name": "Sleep",
+  "description": "A simple sleep tracking app.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#22223b",
+  "theme_color": "#4a4e69",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
